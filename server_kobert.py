@@ -7,8 +7,8 @@ import torch
 import torch.nn.functional as F
 
 # Load tokenizer and model from local directories
-tokenizer = AutoTokenizer.from_pretrained('./tokenizer_kobert', trust_remote_code=True)
-model = BertForSequenceClassification.from_pretrained('./model_kobert', num_labels=5, trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained('../tokenizer_kobert', trust_remote_code=True)
+model = BertForSequenceClassification.from_pretrained('../model_kobert', num_labels=5, trust_remote_code=True)
 
 # GPU 사용 가능하면 GPU로
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
